@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer base {
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            "FILL" 0,
+            "wght" 400,
+            "GRAD" 0,
+            "opsz" 24;
+    }
+
+    .images {
+        position: relative !important;
+    }
+}
+
+@layer utilities {
+    .masonry {
+        column-gap: 1.5em;
+        column-count: 1;
+    }
+
+    .masonry-sm {
+        column-gap: 1.5em;
+        column-count: 1;
+    }
+
+    .masonry-lg {
+        column-gap: 1.5em;
+        column-count: 3;
+    }
+
+    .masonry-md {
+        column-gap: 1.5em;
+        column-count: 2;
+    }
+
+    .break-inside {
+        break-inside: avoid;
+    }
+}
